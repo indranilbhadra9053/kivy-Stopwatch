@@ -1,0 +1,42 @@
+BoxLayout:
+	padding:10
+	orientation:'vertical'
+	
+	Label:
+		id:time
+		text:'[color=#490e67b3][b]'+str(app.min)+'[size=40]min[/size][/b]:'+str(app.sec)+'[size=40]sec[/size].[size=120]'+str(app.ms)+'[/size][size=40]ms[/size][/color]'
+		font_size:180
+		font_color:'red'
+		
+		markup:True
+	BoxLayout:
+		cols:2
+		Button:
+			text:'[color='+app.fontcolor+']start[/color]'
+			font_size:48
+			markup:True
+			background_normal:'F.png'
+			background_down:'F1.png'
+			size_hint:(0.3,0.6)
+			pos_hint:{'x':0.35,'y':0.3}
+			on_press:app.increment()
+			on_release:app.font_color_change()
+		Button:
+			text:'[color='+app.font_color+']'+app.duty+'[/color]'
+			font_size:48
+			markup:True
+			background_normal:'F.png'
+			background_down:'F1.png'
+			size_hint:(0.3,0.6)
+			pos_hint:{'x':0.35,'y':0.3}
+			on_press:app.minus()
+			on_release:app.font_color_change()
+	
+		
+	
+	
+		
+		
+
+	
+			
